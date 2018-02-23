@@ -3,9 +3,13 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.concurrent.ConcurrentMap;
+
 import org.apache.commons.codec.binary.Base64;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -27,6 +31,7 @@ public class Interface {
 	static String ipAddress = "";
 	static String number = "";
 	private static BufferedImage image;
+	static ConcurrentMap<String, DialEntry> dialMap;
 
 
 	private static class YeaDialer extends JPanel {
